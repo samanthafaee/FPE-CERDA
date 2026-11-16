@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive interactive portfolio website.">
+  <title>Studio North | Interactive Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Studio North</a>
+
+    <button class="menu-toggle" type="button"
+      aria-controls="primary-navigation"
+      aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav id="primary-navigation" class="primary-navigation"
+      aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="theme-toggle" class="theme-toggle"
+      type="button"
+      aria-pressed="false">
+      <span aria-hidden="true">◐</span>
+      <span class="theme-label">Dark mode</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <p class="eyebrow">Digital design &amp; development</p>
+
+      <h1>
+        Thoughtful digital experiences for curious people.
+      </h1>
+
+      <p class="hero-copy">
+        Studio North creates clear, useful interfaces that make
+        complex ideas easier to understand and use.
+      </p>
+
+      <a class="button button-primary" href="#work">
+        Explore selected work
+      </a>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">Projects with purpose</h2>
+      </div>
+
+      <div id="project-list"
+        class="project-grid"
+        aria-live="polite">
+      </div>
+    </section>
+
+    <section class="section contact-section"
+      id="contact"
+      aria-labelledby="contact-title">
+
+      <div class="section-heading">
+        <p class="eyebrow">Start a conversation</p>
+        <h2 id="contact-title">Have a project in mind?</h2>
+        <p>Tell us a little about it and we’ll get back to you.</p>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">
+              Name <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              aria-describedby="name-error">
+
+            <p id="name-error"
+              class="field-error"
+              role="alert">
+            </p>
+          </div>
+
+          <div class="form-field">
+            <label for="email">
+              Email <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              aria-describedby="email-error">
+
+            <p id="email-error"
+              class="field-error"
+              role="alert">
+            </p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="message">
+            Message <span aria-hidden="true">*</span>
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            aria-describedby="message-error"></textarea>
+
+          <p id="message-error"
+            class="field-error"
+            role="alert">
+          </p>
+        </div>
+
+        <button class="button button-primary" type="submit">
+          Send enquiry
+        </button>
+
+        <p id="form-success"
+          class="form-success"
+          role="status"
+          tabindex="-1">
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Studio North. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+</body>
+</html>
